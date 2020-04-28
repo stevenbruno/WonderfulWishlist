@@ -8,6 +8,7 @@
     "serverstart": "DEBUG=wishlist PORT=3001:* npm run devstart"
   },
   "dependencies": {
+    "@csstools/normalize.css": "^10.1.0",
     "cookie-parser": "~1.4.4",
     "cors": "^2.8.5",
     "debug": "~2.6.9",
