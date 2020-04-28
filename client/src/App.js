@@ -1,12 +1,12 @@
-import React, { useState, useEffect } from "react";
-import "./App.css";
+import React, { useState, useEffect } from 'react';
+import './App.css';
 
 function App() {
   const [users, setUsers] = useState([]);
 
   useEffect(() => {
     async function fetchUsers() {
-      let response = await fetch("/users");
+      let response = await fetch('/users');
       let data = await response.json();
       setUsers(data);
     }
