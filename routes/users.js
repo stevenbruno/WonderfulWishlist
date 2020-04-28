@@ -6,6 +6,7 @@ router.get('/', function (req, res, next) {
   res.json([
     { id: 1, name: 'steven' },
     { id: 2, name: 'john' },
+    { id: 3, name: 'jeff' },
   ]);
 });
 
