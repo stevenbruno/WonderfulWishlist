@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import Header from './Components/header/header';
 
 function App() {
   const [users, setUsers] = useState([]);
@@ -15,6 +16,7 @@ function App() {
 
   return (
     <div className="App">
+      <Header />
       <h1>Users</h1>
       <ul>
         {users.map((user) => (

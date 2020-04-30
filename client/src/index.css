@@ -1,1 +1,13 @@
 @import-normalize;
+
+body {
+  margin: 0;
+}
+
+.giftIcon {
+  margin-top: 6px;
+}
+
+html {
+  background: rgb(244, 244, 247);
+}
