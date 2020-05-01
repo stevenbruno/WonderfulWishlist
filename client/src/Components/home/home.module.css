@@ -1,5 +1,5 @@
 .landingButton {
-  background-color: dodgerblue;
+  background-color: var(--blue4);
   color: var(--grey1);
   font-weight: 500;
   height: 40px;
@@ -8,4 +8,8 @@
   border: 0;
   border-radius: 4px;
   margin-top: 16px;
+}
+
+.landingButton:hover {
+  background-color: var(--blue5);
 }
