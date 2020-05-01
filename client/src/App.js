@@ -21,27 +21,29 @@ function App() {
     <div className="App">
       <Router>
         <Header />
-        <Switch>
-          <Route exact path="/">
-            <Home />
-          </Route>
-          <Route exact path="/login">
-            <Login />
-          </Route>
-          <Route
-            path="/users"
-            render={() => (
-              <div>
-                <h1>Users</h1>
-                <ul>
-                  {users.map((user) => (
-                    <li key={user.id}>{user.name}</li>
-                  ))}
-                </ul>
-              </div>
-            )}
-          />
-        </Switch>
+        <main>
+          <Switch>
+            <Route exact path="/">
+              <Home />
+            </Route>
+            <Route exact path="/login">
+              <Login />
+            </Route>
+            <Route
+              path="/users"
+              render={() => (
+                <div>
+                  <h1>Users</h1>
+                  <ul>
+                    {users.map((user) => (
+                      <li key={user.id}>{user.name}</li>
+                    ))}
+                  </ul>
+                </div>
+              )}
+            />
+          </Switch>
+        </main>
       </Router>
     </div>
   );

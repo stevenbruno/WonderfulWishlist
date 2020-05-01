@@ -16,7 +16,7 @@ export default function Header() {
         </IconContext.Provider>
       </Link>
       <Link to="/login">
-        <div>Log in/Register</div>
+        <p className={headerStyles.loginLink}>Log in/Register</p>
       </Link>
     </div>
   );
