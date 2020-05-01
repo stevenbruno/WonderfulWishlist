@@ -1,0 +1,11 @@
+.landingButton {
+  background-color: dodgerblue;
+  color: var(--grey1);
+  font-weight: 500;
+  height: 40px;
+  width: 160px;
+  font-size: 1.1em;
+  border: 0;
+  border-radius: 4px;
+  margin-top: 16px;
+}
