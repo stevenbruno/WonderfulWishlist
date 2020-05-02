@@ -8,6 +8,7 @@
   --black5: rgba(0, 0, 0, 0.9);
 
   --grey1: rgb(244, 244, 247);
+  --grey2: rgb(233, 233, 235);
 
   --blue4: rgb(30, 144, 255);
   --blue5: rgb(31, 121, 211);
@@ -21,6 +22,30 @@ html {
 
 body {
   margin: 0;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin-bottom: 6px;
+}
+
+input {
+  font-size: 1em;
+  box-sizing: border-box;
+  border: 1px solid var(--grey2);
+  border-radius: 4px;
+  height: 32px;
+  width: 240px;
+  margin-bottom: 16px;
+  padding: 2px 4px;
+}
+
+input:focus {
+  border: 1px solid var(--blue4);
 }
 
 main {
