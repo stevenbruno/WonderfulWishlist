@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     async function fetchUsers() {
-      let response = await fetch('/users');
+      let response = await fetch('/testdata');
       let data = await response.json();
       setUsers(data);
     }
@@ -30,10 +30,10 @@ function App() {
               <Login />
             </Route>
             <Route
-              path="/users"
+              path="/testdata"
               render={() => (
                 <div>
-                  <h1>Users</h1>
+                  <h1>Test Data</h1>
                   <ul>
                     {users.map((user) => (
                       <li key={user.id}>{user.name}</li>
