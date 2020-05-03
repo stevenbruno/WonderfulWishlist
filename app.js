@@ -21,6 +21,10 @@ require('./config/passport')(passport);
 
 const app = express();
 
+app.use('/', indexRouter);
+app.use('/testdata', testRouter);
+app.use('/users', usersRouter);
+
 //Set up mongoose connection
 const db_key = process.env.DB_USER_KEY;
 const mongoDB = `mongodb+srv://sbruno636:${db_key}@cluster0-tmnvz.mongodb.net/wishlist?retryWrites=true&w=majority`;
@@ -56,10 +60,6 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
-
-app.use('/', indexRouter);
-app.use('/testdata', testRouter);
-app.use('/users', usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function (req, res, next) {
