@@ -21,10 +21,6 @@ require('./config/passport')(passport);
 
 const app = express();
 
-app.use('/', indexRouter);
-app.use('/testdata', testRouter);
-app.use('/users', usersRouter);
-
 //Set up mongoose connection
 const db_key = process.env.DB_USER_KEY;
 const mongoDB = `mongodb+srv://sbruno636:${db_key}@cluster0-tmnvz.mongodb.net/wishlist?retryWrites=true&w=majority`;
@@ -42,6 +38,10 @@ app.use(
   })
 );
 app.use(bodyParser.json());
+
+app.use('/', indexRouter);
+app.use('/testdata', testRouter);
+app.use('/users', usersRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
