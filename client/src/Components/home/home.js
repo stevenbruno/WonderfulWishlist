@@ -6,10 +6,7 @@ export default function Home() {
     <>
       <div>
         <h1>Wonderful Wishlist</h1>
-        <p>
-          Create and share wishlists with friends and family. Let them
-          collaborate and claim gifts, entirely hidden from your view.
-        </p>
+        <p>Share your holiday wishlists with friends and family.</p>
         <button className={homeStyles.landingButton}>Create wishlist</button>
       </div>
     </>
