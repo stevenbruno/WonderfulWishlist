@@ -33,7 +33,9 @@ export default function SignupCard() {
           value={password2}
           onChange={(e) => setPassword2(e.target.value)}
         />
-        <button type="button">Sign up</button>
+        <button class="primarybtn" type="button">
+          Sign up
+        </button>
       </form>
     </>
   );

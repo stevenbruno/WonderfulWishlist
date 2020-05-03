@@ -3,7 +3,6 @@ import headerStyles from './header.module.css';
 import { GoGift } from 'react-icons/go';
 import { IconContext } from 'react-icons';
 import { Link } from 'react-router-dom';
-import '../../index.css';
 
 export default function Header() {
   return (
