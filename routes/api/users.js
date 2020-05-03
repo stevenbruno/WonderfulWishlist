@@ -60,7 +60,7 @@ router.post('/login', (req, res) => {
         // User matched
         // Sign token
         jwt.sign(
-          { user },
+          { userId: user.id, userEmail: user.email },
           keys.secretOrKey,
           {
             expiresIn: 2628000, // 1 month in seconds
