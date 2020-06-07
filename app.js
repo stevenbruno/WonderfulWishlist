@@ -13,10 +13,9 @@ const cors = require('cors');
 require('dotenv').config();
 
 const indexRouter = require('./routes/index');
-const testRouter = require('./routes/api/testdata');
+const testRouter = require('./routes/api/test');
 const usersRouter = require('./routes/api/users');
 
-// Passport config
 require('./config/passport')(passport);
 
 const app = express();
@@ -40,14 +39,20 @@ app.use(
 app.use(bodyParser.json());
 
 app.use('/', indexRouter);
-app.use('/testdata', testRouter);
+app.use('/test', passport.authenticate('jwt', { session: false }), testRouter);
 app.use('/users', usersRouter);
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'jade');
 
-app.use(session({ secret: 'cats', resave: false, saveUninitialized: true }));
+app.use(
+  session({
+    secret: `${process.env.SESSION_KEY}`,
+    resave: false,
+    saveUninitialized: true,
+  })
+);
 app.use(passport.initialize());
 app.use(passport.session());
 app.use(express.urlencoded({ extended: false }));

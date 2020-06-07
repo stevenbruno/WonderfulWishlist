@@ -9,7 +9,7 @@ function App() {
 
   useEffect(() => {
     async function fetchUsers() {
-      let response = await fetch('/testdata');
+      let response = await fetch('/test');
       let data = await response.json();
       setUsers(data);
     }
@@ -30,7 +30,7 @@ function App() {
               <Login />
             </Route>
             <Route
-              path="/testdata"
+              path="/test"
               render={() => (
                 <div>
                   <h1>Test Data</h1>
