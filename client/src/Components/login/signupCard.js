@@ -9,7 +9,7 @@ export default function SignupCard() {
     <>
       <h1>Sign up</h1>
       <form>
-        <label for="email">Email</label>
+        <label htmlFor="email">Email</label>
         <input
           name="email"
           placeholder="Email@domain.com"
@@ -17,7 +17,7 @@ export default function SignupCard() {
           value={email}
           onChange={(e) => setEmail(e.target.value)}
         />
-        <label for="password">Password</label>
+        <label htmlFor="password">Password</label>
         <input
           name="password"
           placeholder="Password"
@@ -25,7 +25,7 @@ export default function SignupCard() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <label for="password2">Confirm Password</label>
+        <label htmlFor="password2">Confirm Password</label>
         <input
           name="password2"
           placeholder="Confirm password"
@@ -33,7 +33,7 @@ export default function SignupCard() {
           value={password2}
           onChange={(e) => setPassword2(e.target.value)}
         />
-        <button class="primarybtn" type="button">
+        <button className="primarybtn" type="button">
           Sign up
         </button>
       </form>
