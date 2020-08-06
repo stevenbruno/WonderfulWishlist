@@ -7,15 +7,15 @@ import Login from './Components/login/login';
 function App() {
   const [users, setUsers] = useState([]);
 
-  useEffect(() => {
-    async function fetchUsers() {
-      let response = await fetch('/test');
-      let data = await response.json();
-      setUsers(data);
-    }
+  // useEffect(() => {
+  //   async function fetchUsers() {
+  //     let response = await fetch('/test');
+  //     let data = await response.json();
+  //     setUsers(data);
+  //   }
 
-    fetchUsers();
-  }, []);
+  //   fetchUsers();
+  // }, []);
 
   return (
     <div className="App">
@@ -35,9 +35,9 @@ function App() {
                 <div>
                   <h1>Test Data</h1>
                   <ul>
-                    {users.map((user) => (
+                    {/* {users.map((user) => (
                       <li key={user.id}>{user.name}</li>
-                    ))}
+                    ))} */}
                   </ul>
                 </div>
               )}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import axios from 'axios';
 
 export default function SignupCard() {
   const [email, setEmail] = useState('');
@@ -24,7 +25,25 @@ export default function SignupCard() {
           value={password}
           onChange={(e) => setPassword(e.target.value)}
         />
-        <button className="primarybtn" type="button">
+        <button
+          className="primarybtn"
+          type="button"
+          onClick={() =>
+            axios
+              .post('/users/register', {
+                email,
+                password,
+              })
+              .then(
+                (response) => {
+                  console.log(response);
+                },
+                (error) => {
+                  console.log(error);
+                }
+              )
+          }
+        >
           Sign up
         </button>
       </form>
